@@ -28,8 +28,8 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16-alpha.20.18.a",
-    "fabricshieldlib": "1.0.2"
+    "minecraft": "1.16-alpha.20.19.a",
+    "fabricshieldlib": "1.0.3"
   },
   "suggests": {
     "flamingo": "*"
