@@ -33,14 +33,14 @@ public class ExampleShield extends FabricShield
 	}
 	
 	@Override
-	public void whileBlockingTick(LivingEntity defender, Hand hand, ItemStack shield)
+	public void whileBlocking(LivingEntity defender, Hand hand, ItemStack shield)
 	{
 		//Give the holder resistance while blocking
 		defender.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 2, 0, true, true));
 	}
 	
 	@Override
-	public void whileHoldingTick(LivingEntity defender, boolean blocking, Hand hand, ItemStack shield)
+	public void whileHolding(LivingEntity defender, boolean blocking, Hand hand, ItemStack shield)
 	{
 		//If the holder is not blocking give them speed
 		if(!blocking)

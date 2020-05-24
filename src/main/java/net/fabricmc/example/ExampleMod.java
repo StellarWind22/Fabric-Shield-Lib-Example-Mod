@@ -3,11 +3,9 @@ package net.fabricmc.example;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import me.crimsondawn45.fabricshieldlib.FabricShieldLib;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.example.object.ExampleShield;
 import net.fabricmc.example.object.ExampleShieldEnchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantment.Rarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -28,7 +26,7 @@ public class ExampleMod implements ModInitializer
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "example_shield"), new ExampleShield(new Item.Settings().group(ItemGroup.COMBAT), 100, 337, ItemTags.PLANKS));
 		
 		//Register the new shield enchantment
-		Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "example_enchantment"), new ExampleShieldEnchantment(Rarity.COMMON, EnchantmentTarget.BREAKABLE, FabricShieldLib.allShields));
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "example_enchantment"), new ExampleShieldEnchantment(Rarity.COMMON));
 		
 		LOGGER.info("\"" + MOD_ID + "\" Initialized...");
 	}
