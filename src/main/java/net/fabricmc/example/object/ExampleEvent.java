@@ -1,6 +1,6 @@
 package net.fabricmc.example.object;
 
-import me.crimsondawn45.fabricshieldlib.util.event.ShieldEvent;
+import me.crimsondawn45.fabricshieldlib.lib.event.ShieldEvent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;

@@ -3,8 +3,8 @@ package net.fabricmc.example;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import me.crimsondawn45.fabricshieldlib.object.BasicEventShield;
-import me.crimsondawn45.fabricshieldlib.object.ShieldEnchantment;
+import me.crimsondawn45.fabricshieldlib.lib.object.FabricShield;
+import me.crimsondawn45.fabricshieldlib.lib.object.ShieldEnchantment;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.example.object.ExampleEvent;
 import net.minecraft.enchantment.Enchantment.Rarity;
@@ -23,10 +23,14 @@ public class ExampleMod implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		//Register the new shield item
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "example_shield"), new BasicEventShield(new Item.Settings().group(ItemGroup.COMBAT), 100, 337, new ExampleEvent(true, true, true), ItemTags.PLANKS));
+		/**
+		 * Add example shield item to game
+		 */
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "example_shield"), new FabricShield(new Item.Settings().group(ItemGroup.COMBAT), 100, 337, ItemTags.PLANKS));
 		
-		//Register the new shield enchantment
+		/**
+		 * Add example shield enchantment to game using a ShieldEvent to add effects
+		 */
 		Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "example_enchantment"), new ShieldEnchantment(Rarity.COMMON, new ExampleEvent(true, true, true)));
 		
 		LOGGER.info("\"" + MOD_ID + "\" Initialized...");
