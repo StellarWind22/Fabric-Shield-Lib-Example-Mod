@@ -26,7 +26,7 @@ public class ExampleMod implements ModInitializer
 		/**
 		 * Add example shield item to game
 		 */
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "example_shield"), new FabricShield(new Item.Settings().group(ItemGroup.COMBAT), 100, 337, ItemTags.PLANKS));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "example_shield"), new FabricShield(new Item.Settings().group(ItemGroup.COMBAT), 100, 336, 9, ItemTags.PLANKS));
 		
 		/**
 		 * Add example shield enchantment to game using a ShieldEvent to add effects
