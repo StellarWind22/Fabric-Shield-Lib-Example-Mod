@@ -1,6 +1,5 @@
 package net.fabricmc.example.mixin;
 
-import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.fabricmc.example.ExampleMod;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
@@ -39,7 +38,7 @@ public class RendererMixin {
 	@Inject(method = "render", at = @At("HEAD"))
 	private void mainRender(ItemStack stack, ModelTransformation.Mode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, CallbackInfo ci) {
 		if (stack.isOf(ExampleMod.TEST_SHIELD_WITH_BANNER_SUPPORT)) {
-			FabricShieldItem.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, TEST_SHIELD_BASE, TEST_SHIELD_BASE_NO_PATTERN);
+			FabricShieldLib.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, TEST_SHIELD_BASE, TEST_SHIELD_BASE_NO_PATTERN);
 		}
 	}
 
