@@ -3,8 +3,8 @@
   "id": "examplemod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Shield Example Mod",
+  "description": "This is an example of a mod made using Fabric Shield Lib!",
   "authors": [
     "Me!"
   ],
