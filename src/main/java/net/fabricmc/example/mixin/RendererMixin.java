@@ -1,6 +1,7 @@
 package net.fabricmc.example.mixin;
 
 import net.fabricmc.example.ExampleMod;
+import com.github.crimsondawn45.fabricshieldlib.initializers.FabricShieldLib;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.render.entity.model.ShieldEntityModel;
