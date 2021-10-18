@@ -2,6 +2,7 @@ package net.fabricmc.example;
 
 import com.github.crimsondawn45.fabricshieldlib.lib.event.ShieldBlockCallback;
 import com.github.crimsondawn45.fabricshieldlib.lib.event.ShieldDisabledCallback;
+import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricBannerShieldItem;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldEnchantment;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.fabricmc.api.ModInitializer;
@@ -28,9 +29,9 @@ public class ExampleMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("modid");
 
-	public static final Item TEST_SHIELD = new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ItemGroup.COMBAT), 100, 9, Items.OAK_PLANKS, false); // FabricShieldItem(settings.maxDamage(durability), cooldownTicks, enchantability, repairItem, bannerSupport)
+	public static final Item TEST_SHIELD = new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ItemGroup.COMBAT), 100, 9, Items.OAK_PLANKS); // FabricShieldItem(settings.maxDamage(durability), cooldownTicks, enchantability, repairItem)
 
-	public static final Item TEST_SHIELD_WITH_BANNER_SUPPORT = new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ItemGroup.COMBAT), 100, 9, Items.OAK_PLANKS, true); // FabricShieldItem(settings.maxDamage(durability), cooldownTicks, enchantability, repairItem, bannerSupport)
+	public static final Item TEST_SHIELD_WITH_BANNER_SUPPORT = new FabricBannerShieldItem(new FabricItemSettings().maxDamage(2500).group(ItemGroup.COMBAT), 100, 9, Items.OAK_PLANKS); // FabricBannerShieldItem(settings.maxDamage(durability), cooldownTicks, enchantability, repairItem)
 
 	public static final EntityModelLayer TEST_SHIELD_MODEL_LAYER = new EntityModelLayer(new Identifier("examplemod", "test_shield"),"main");
 
