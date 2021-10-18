@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "examplemod",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -9,8 +9,8 @@
     "Me!"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "www.curseforge.com/minecraft/mc-mods/fabric-shield-lib",
+    "sources": "https://github.com/CrimsonDawn45/Fabric-Shield-Lib-Example-Mod"
   },
 
   "license": "CC0-1.0",
@@ -26,7 +26,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "examplemod.mixins.json"
   ],
 
   "depends": {
