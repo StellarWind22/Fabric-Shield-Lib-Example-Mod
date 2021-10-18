@@ -1,7 +1,10 @@
 package net.fabricmc.example.mixin;
 
 import net.fabricmc.example.ExampleMod;
-import com.github.crimsondawn45.fabricshieldlib.initializers.FabricShieldLib;
+import net.fabricmc.example.ExampleModClient;
+
+import com.github.crimsondawn45.fabricshieldlib.initializers.FabricShieldLibClient;
+
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.render.entity.model.ShieldEntityModel;
@@ -33,14 +36,13 @@ public class RendererMixin {
 
 	@Inject(method = "reload", at = @At("HEAD"))
 	private void setModelTestShield(CallbackInfo ci){
-		modelTestShield = new ShieldEntityModel(this.entityModelLoader.getModelPart(ExampleMod.TEST_SHIELD_MODEL_LAYER));
+		modelTestShield = new ShieldEntityModel(this.entityModelLoader.getModelPart(ExampleModClient.EXAMPLE_SHIELD_MODEL_LAYER));
 	}
 
 	@Inject(method = "render", at = @At("HEAD"))
 	private void mainRender(ItemStack stack, ModelTransformation.Mode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, CallbackInfo ci) {
-		if (stack.isOf(ExampleMod.TEST_SHIELD_WITH_BANNER_SUPPORT)) {
-			FabricShieldLib.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, TEST_SHIELD_BASE, TEST_SHIELD_BASE_NO_PATTERN);
+		if (stack.isOf(ExampleMod.EXAMPLE_BANNER_SHIELD)) {
+			FabricShieldLibClient.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, TEST_SHIELD_BASE, TEST_SHIELD_BASE_NO_PATTERN);
 		}
 	}
-
 }

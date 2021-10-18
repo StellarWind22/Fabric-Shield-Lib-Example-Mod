@@ -1,0 +1,11 @@
+{
+  "parent":"fabricshieldlib:item/fabric_banner_shield",
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "examplemod:item/example_banner_shield_blocking"
+    }
+  ]
+}
