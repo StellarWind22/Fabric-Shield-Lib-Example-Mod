@@ -1,6 +1,6 @@
 # Fabric-Shield-Lib-Example-Mod
 This is an example mod repo for [Fabric Shield Lib](https://github.com/CrimsonDawn45/Fabric-Shield-Lib).
-To quickly create a mod that uses FabricShieldLib you can just use this template.
+To quickly create a mod that uses it you can just use this template.
 
 There is also a tutorial available at the [Fabric Wiki](https://fabricmc.net/wiki/tutorial:shield).
 
