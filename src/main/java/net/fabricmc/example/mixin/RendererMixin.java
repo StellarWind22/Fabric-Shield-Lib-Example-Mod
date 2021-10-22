@@ -26,8 +26,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class RendererMixin {
 
 	private ShieldEntityModel modelTestShield;
-	private static final SpriteIdentifier TEST_SHIELD_BASE = new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("examplemod","entity/test_shield_base"));
-	private static final SpriteIdentifier TEST_SHIELD_BASE_NO_PATTERN = new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("examplemod","entity/test_shield_base_nopattern"));
+	private static final SpriteIdentifier EXAMPLE_SHIELD_BASE = new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier(ExampleMod.MOD_ID,"entity/example_shield_base"));
+	private static final SpriteIdentifier EXAMPLE_SHIELD_BASE_NO_PATTERN = new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier(ExampleMod.MOD_ID,"entity/example_shield_base_nopattern"));
 
 	@Final
 	@Shadow
@@ -42,7 +42,7 @@ public class RendererMixin {
 	@Inject(method = "render", at = @At("HEAD"))
 	private void mainRender(ItemStack stack, ModelTransformation.Mode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, CallbackInfo ci) {
 		if (stack.isOf(ExampleMod.EXAMPLE_BANNER_SHIELD)) {
-			FabricShieldLibClient.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, TEST_SHIELD_BASE, TEST_SHIELD_BASE_NO_PATTERN);
+			FabricShieldLibClient.renderBanner(stack, matrices, vertexConsumers, light, overlay, modelTestShield, EXAMPLE_SHIELD_BASE, EXAMPLE_SHIELD_BASE_NO_PATTERN);
 		}
 	}
 }

@@ -10,14 +10,14 @@ import net.minecraft.util.Identifier;
 
 public class ExampleModClient implements ClientModInitializer {
 
-    public static final EntityModelLayer EXAMPLE_SHIELD_MODEL_LAYER = new EntityModelLayer(new Identifier("examplemod", "example_shield"),"main");
+    public static final EntityModelLayer EXAMPLE_SHIELD_MODEL_LAYER = new EntityModelLayer(new Identifier(ExampleMod.MOD_ID, "example_shield"),"main");
     
     @Override
     public void onInitializeClient() {
         EntityModelLayerRegistry.registerModelLayer(EXAMPLE_SHIELD_MODEL_LAYER, ShieldEntityModel::getTexturedModelData);
         ClientSpriteRegistryCallback.event(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
-            registry.register(new Identifier("examplemod", "entity/example_shield_base"));
-            registry.register(new Identifier("examplemod", "entity/example_shield_base_nopattern"));
+            registry.register(new Identifier(ExampleMod.MOD_ID, "entity/example_shield_base"));
+            registry.register(new Identifier(ExampleMod.MOD_ID, "entity/example_shield_base_nopattern"));
         });
     }
 }
