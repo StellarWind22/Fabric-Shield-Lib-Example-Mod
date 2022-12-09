@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "modid",
   "version": "${version}",
 
   "name": "Shield Example Mod",
@@ -15,7 +15,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/examplemod/icon.png",
+  "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -27,14 +27,17 @@
     ]
   },
   "mixins": [
-    "examplemod.mixins.json"
+    "modid.mixins.json"
   ],
 
   "depends": {
-    "fabricshieldlib": ">=1.4.4-1.17.1",
-    "fabricloader": ">=0.11.3",
-    "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
+    "fabricshieldlib": ">=1.6.0-1.19",
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }
